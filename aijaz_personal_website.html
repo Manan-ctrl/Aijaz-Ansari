@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aijaz Ansari | AI & Technology Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 8%;
+            position: sticky;
+            top: 0;
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+        }
+
+        header h1 { font-size: 22px; font-weight: 600; letter-spacing: 1px; }
+
+        nav a {
+            color: #fff;
+            margin-left: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: -5px;
+            background: #00e6e6;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after { width: 100%; }
+
+        section { padding: 80px 8%; max-width: 1200px; margin: auto; }
+
+        .hero {
+            height: 95vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 { font-size: 48px; font-weight: 700; }
+        .hero span { color: #00e6e6; }
+        .hero p { max-width: 700px; margin-top: 15px; opacity: 0.85; }
+
+        .btn {
+            margin-top: 25px;
+            padding: 12px 28px;
+            border-radius: 30px;
+            border: none;
+            background: #00e6e6;
+            color: #000;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        .btn:hover { transform: scale(1.08); }
+
+        h3.section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.06);
+            padding: 25px;
+            border-radius: 18px;
+            backdrop-filter: blur(12px);
+            transition: 0.3s ease;
+        }
+        .card:hover { transform: translateY(-8px); }
+
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+        .skills .skill { margin-bottom: 18px; }
+        .skill-name { font-size: 14px; margin-bottom: 6px; }
+        .skill-bar { height: 8px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; }
+        .skill-level { height: 100%; background: #00e6e6; width: 0; }
+
+        .timeline { border-left: 3px solid #00e6e6; padding-left: 20px; }
+        .timeline div { margin-bottom: 25px; }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+            background: rgba(0,0,0,0.4);
+            font-size: 14px;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            padding: 10px 16px;
+            border-radius: 30px;
+            border: none;
+            background: #00e6e6;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .dark-mode { background: #0b0f14; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aijaz Ansari</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Journey</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Hi, I'm <span>Aijaz</span> — Future AI Engineer</h2>
+    <p>I design intelligent systems, develop AI-powered applications, and explore advanced technologies to build meaningful digital solutions.</p>
+    <button class="btn" onclick="scrollToSection('projects')">Explore Projects</button>
+</section>
+
+<section id="about">
+    <h3 class="section-title">About Me</h3>
+    <div class="card">
+        <p>I am a technology-focused student passionate about Artificial Intelligence, software development, and futuristic interface design. My goal is to create smart, impactful, and real-world solutions through coding and innovation.</p>
+    </div>
+</section>
+
+<section id="skills" class="skills">
+    <h3 class="section-title">Technical Skills</h3>
+    <div class="grid-2">
+        <div class="card">
+            <div class="skill"><div class="skill-name">Python & AI Development</div><div class="skill-bar"><div class="skill-level" style="width:90%"></div></div></div>
+            <div class="skill"><div class="skill-name">Web Development</div><div class="skill-bar"><div class="skill-level" style="width:85%"></div></div></div>
+            <div class="skill"><div class="skill-name">App Development</div><div class="skill-bar"><div class="skill-level" style="width:80%"></div></div></div>
+            <div class="skill"><div class="skill-name">UI/UX Design</div><div class="skill-bar"><div class="skill-level" style="width:75%"></div></div></div>
+        </div>
+        <div class="card">
+            <h4>Core Interests</h4>
+            <ul>
+                <li>Artificial Intelligence & Automation</li>
+                <li>Futuristic User Interfaces</li>
+                <li>Smart Productivity Systems</li>
+                <li>Environmental Technology Projects</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h3 class="section-title">Highlighted Projects</h3>
+    <div class="grid-3">
+        <div class="card"><h4>AI Virtual Assistant</h4><p>A multi-functional assistant featuring automation, smart responses, and futuristic UI interactions.</p></div>
+        <div class="card"><h4>Smart Expense Manager</h4><p>An intelligent finance tracking system powered by AI-based spending insights.</p></div>
+        <div class="card"><h4>EcoTrack AI</h4><p>An AI-driven environmental project focused on sustainability and smart monitoring.</p></div>
+    </div>
+</section>
+
+<section id="timeline">
+    <h3 class="section-title">Learning Journey</h3>
+    <div class="timeline">
+        <div><h4>Started Programming</h4><p>Began learning Python and core programming fundamentals.</p></div>
+        <div><h4>Explored AI & Automation</h4><p>Built early AI tools and smart assistants.</p></div>
+        <div><h4>Advanced Projects</h4><p>Developing real-world AI applications and intelligent systems.</p></div>
+    </div>
+</section>
+
+<section id="blog">
+    <h3 class="section-title">Blog & Thoughts</h3>
+    <div class="card">
+        <input type="text" id="blogTitle" placeholder="Blog Title">
+        <textarea id="blogContent" rows="5" placeholder="Write your thoughts..."></textarea>
+        <button class="btn" onclick="addBlog()">Publish</button>
+    </div>
+    <div id="blogPosts" class="grid-3" style="margin-top:30px;"></div>
+</section>
+
+<section id="contact">
+    <h3 class="section-title">Contact</h3>
+    <div class="card">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button class="btn">Send Message</button>
+    </div>
+</section>
+
+<footer>
+    © 2026 Aijaz Ansari | AI & Technology Portfolio
+</footer>
+
+<button class="toggle-btn" onclick="toggleDarkMode()">Mode</button>
+
+<script>
+function scrollToSection(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});} 
+function toggleDarkMode(){document.body.classList.toggle('dark-mode');}
+function addBlog(){
+    let title=document.getElementById('blogTitle').value.trim();
+    let content=document.getElementById('blogContent').value.trim();
+    if(title && content){
+        let post=document.createElement('div');
+        post.className='card';
+        post.innerHTML=`<h4>${title}</h4><p>${content}</p>`;
+        document.getElementById('blogPosts').appendChild(post);
+        document.getElementById('blogTitle').value='';
+        document.getElementById('blogContent').value='';
+    }
+}
+</script>
+
+</body>
+</html>
